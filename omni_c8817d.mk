@@ -15,10 +15,11 @@
 #
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/omni/config/phone-xxhdpi-2048-dalvik-heap.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/huawei/c8817d/full_c8817d.mk)
 
+# NOTE: The following defs will override those in full_c8817d.mk
 PRODUCT_RELEASE_NAME := C8817D
-PRODUCT_NAME := cm_c8817d
+PRODUCT_NAME := omni_c8817d

@@ -18,7 +18,7 @@ KERNEL_USE_OF ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_USE_OF
 ifeq "$(KERNEL_USE_OF)" "y"
 
 define append-dtb
-cp $(LOCAL_PRIVATE_PATH)/dt.img $(OUT)/dt.img
+cp $(LOCAL_PRIVATE_PATH)/dt.img $(PRODUCT_OUT)/dt.img
 endef
 else
 

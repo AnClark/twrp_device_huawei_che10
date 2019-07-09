@@ -23,8 +23,6 @@ TARGET_NO_RPC := true
 
 # Platform
 TARGET_ARCH := arm
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_CPU_ABI  := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
@@ -85,11 +83,6 @@ DEVICE_RESOLUTION := 720x1280
 # SELinux
 BOARD_SEPOLICY_DIRS += \
        device/huawei/c8817d/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-       file_contexts \
-       device.te \
-       vm_bms.te
 
 # TWRP config
 RECOVERY_VARIANT := twrp
