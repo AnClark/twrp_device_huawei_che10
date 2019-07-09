@@ -3,6 +3,8 @@ INSTALLED_DTIMAGE_TARGET := $(PRODUCT_OUT)/dt.img
 
 $(INSTALLED_DTIMAGE_TARGET):
 	@echo -e ${CL_CYN}"Start DT image: $@"${CL_RST}
+	@echo -e ${CL_CYN}"Copy DT image to target output"${CL_RST}
+	cp $(TARGET_DEVICE_DIR)/dt.img $(INSTALLED_DTIMAGE_TARGET)
 	$(call append-dtb)
 	$(call pretty,"Target dt image: $(INSTALLED_DTIMAGE_TARGET)")
 	@echo -e ${CL_CYN}"Made DT image: $@"${CL_RST}
