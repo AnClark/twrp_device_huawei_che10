@@ -44,6 +44,11 @@ HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE := true
 PROTOBUF_SUPPORTED := true
 
 # Kernel
+# Use MoKee's kernel source and config
+TARGET_KERNEL_SOURCE := kernel/huawei/msm8916
+TARGET_KERNEL_CONFIG := mokee_cherry_defconfig
+BOARD_KERNEL_IMAGE_NAME := zImage
+BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_CMDLINE := androidboot.console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci androidboot.selinux=permissive
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_BASE        := 0x80000000
