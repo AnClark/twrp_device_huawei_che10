@@ -25,7 +25,7 @@ TARGET_NO_RPC := true
 TARGET_ARCH := arm
 TARGET_CPU_ABI  := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_VARIANT := cortex-a53
+TARGET_CPU_VARIANT := armv8-a 
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_BOARD_PLATFORM := msm8916
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno306
@@ -92,18 +92,24 @@ BOARD_SEPOLICY_DIRS += \
 # TWRP config
 RECOVERY_VARIANT := twrp
 TARGET_CUSTOM_KERNEL_HEADERS := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-TW_BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/c8817d/recovery/graphics.c
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
-TW_TARGET_USES_QCOM_BSP := true
+#TW_TARGET_USES_QCOM_BSP := true
 TW_FLASH_FROM_STORAGE := true
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_DEFAULT_EXTERNAL_STORAGE := true
+# Blacklist: use \x0a as separator. See recovery/minuitwrp/events.cpp
+TW_INPUT_BLACKLIST := "lis3dh-accel\x0ahbtp_vm"
 TW_INCLUDE_CRYPTO := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 255
 TW_NO_SCREEN_TIMEOUT := true
 TW_NO_SCREEN_BLANK := true
+TW_NEW_ION_HEAP := true
+TW_EXTRA_LANGUAGES := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 BOARD_SUPPRESS_SECURE_ERASE := true
+
+# For debug
+#TWRP_EVENT_LOGGING := true
