@@ -1,2 +1,2 @@
-add_lunch_combo omni_c8817d-userdebug
+add_lunch_combo omni_che10-userdebug
 

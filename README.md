@@ -1,5 +1,5 @@
-# android_device_huawei_c8817d
-TWRP Device configuration for Huawei Honor 4X with MSM8916 (c8817d, aka. che10)
+# twrp_device_huawei_che10
+TWRP Device configuration for Huawei Honor 4X, China Telecom version, with MSM8916 (che10, aka. c8817d)
 
 ## How to build
 
@@ -9,7 +9,7 @@ TWRP Device configuration for Huawei Honor 4X with MSM8916 (c8817d, aka. che10)
    
    ```
    source build/envsetup.sh
-   lunch omni_c8817d-userdebug
+   lunch omni_che10-userdebug
    make recoveryimage
    ```
    
@@ -23,3 +23,6 @@ The only dependency is the kernel source from MoKee. Go to OmniROM source root, 
 git clone -b mkp https://github.com/MoKee/android_kernel_huawei_msm8916 kernel/huawei/msm8916
 ```
 
+## Credits
+
+- Original maintainer: [@dianlujitao](https://github.com/dianlujitao)

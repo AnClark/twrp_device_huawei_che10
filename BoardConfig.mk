@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/huawei/c8817d
+LOCAL_PATH := device/huawei/che10
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_KERNEL := false
@@ -87,7 +87,7 @@ DEVICE_RESOLUTION := 720x1280
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-       device/huawei/c8817d/sepolicy
+       $(LOCAL_PATH)/sepolicy
 
 # TWRP config
 RECOVERY_VARIANT := twrp
@@ -113,3 +113,5 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 
 # For debug
 #TWRP_EVENT_LOGGING := true
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true

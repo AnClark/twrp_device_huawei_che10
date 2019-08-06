@@ -21,11 +21,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/huawei/c8817d/device.mk)
+$(call inherit-product, device/huawei/che10/device.mk)
 
-PRODUCT_DEVICE := c8817d
-PRODUCT_NAME := full_c8817d
+PRODUCT_DEVICE := che10
+PRODUCT_NAME := full_che10
 PRODUCT_BRAND := Huawei
-PRODUCT_MODEL := C8817D
+PRODUCT_MODEL := Che1-CL10
 PRODUCT_MANUFACTURER := HUAWEI
 PRODUCT_RESTRICT_VENDOR_FILES := false

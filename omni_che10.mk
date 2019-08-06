@@ -18,8 +18,8 @@
 $(call inherit-product, vendor/omni/config/phone-xxhdpi-2048-dalvik-heap.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/huawei/c8817d/full_c8817d.mk)
+$(call inherit-product, device/huawei/che10/full_che10.mk)
 
 # NOTE: The following defs will override those in full_c8817d.mk
-PRODUCT_RELEASE_NAME := C8817D
-PRODUCT_NAME := omni_c8817d
+PRODUCT_RELEASE_NAME := Che10
+PRODUCT_NAME := omni_che10
